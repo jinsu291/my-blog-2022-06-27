@@ -18,7 +18,7 @@ function BlogPage() {
         }
     }
     `);
-
+        <div></div>
     return (
         <Layout pageTitle="My Blog Posts">
             {data.allMdx.nodes.map((node) => (
