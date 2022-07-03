@@ -1,0 +1,31 @@
+---
+title: "[Javascript 5]제어문"
+date: "2022-07-03"
+---
+
+- 문의 끝에는 세미콜론을 붙이는 것이 일반적이다. 하지만 블록문은 언제나 문의 종료를 의미하는 자체 종결성을 갖기 때문에 블록문의 끝에는 세미콜론을 붙이지 않는다.
+
+//자스
+var month = 11;
+var monthName;
+
+switch (month) {
+case 1: monthName = ‘January’;
+case 2: monthName = ‘February’;
+case 3: monthName = ‘March’;
+case 4: monthName = ‘April’;
+case 5: monthName = ‘May’;
+case 6: monthName = ‘June’;
+case 7: monthName = ‘July’;
+case 8: monthName = ‘August’;
+case 9: monthName = ‘September’;
+case 10: monthName = ‘October’;
+case 11: monthName = ‘November’;
+case 12: monthName = ‘December’;
+default : monthName = ‘Invalid month’;
+}
+console.log(monthName); //Invalid month
+
+- monthName 변수에 ‘November’가 할당된 후 switch 문을 탈출하지 않고 연이어 ‘December’ 가 재할당되고 마지막으로 ‘Invalid month’가 재할당된 것이다.
+
+- 마지막에 break 문을 사용하지 않았기 때문에 발생한 문제이다. 그리고 default문에는 break문을 생략하는 것이 일반적이다.
